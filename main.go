@@ -24,6 +24,7 @@ var users = map[string]string{
 
 func main() {
 	ses.DefaultSessionTimeout = 120
+	ses.HmacKey = "my-secret-key"
 
 	// Signin and "Welcome" are the handlers
 	http.HandleFunc("/signin", Signin)
